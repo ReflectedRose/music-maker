@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link href = "stylesheet.css" rel = "stylesheet">
+        <title>midi</title>
+
+    </head>
+    <body>
+        <div class="grid">
+            <div id = "b0" class="grid-item"></div>
+            <div id = "b1" class="grid-item"></div>
+            <div id = "b2" class="grid-item"></div>
+            <div id = "b3" class="grid-item"></div>
+            <div id = "b4" class="grid-item"></div>
+            <div id = "b5" class="grid-item"></div>
+            <div id = "b6" class="grid-item"></div>
+            <div id = "b7" class="grid-item"></div>
+            <div id = "a0" class="grid-item"></div>
+            <div id = "a1" class="grid-item"></div>
+            <div id = "a2" class="grid-item"></div>
+            <div id = "a3" class="grid-item"></div>
+            <div id = "a4" class="grid-item"></div>
+            <div id = "a5" class="grid-item"></div>
+            <div id = "a6" class="grid-item"></div>
+            <div id = "a7" class="grid-item"></div>
+            <div id = "g0" class="grid-item"></div>
+            <div id = "g1" class="grid-item"></div>
+            <div id = "g2" class="grid-item"></div>
+            <div id = "g3" class="grid-item"></div>
+            <div id = "g4" class="grid-item"></div>
+            <div id = "g5" class="grid-item"></div>
+            <div id = "g6" class="grid-item"></div>
+            <div id = "g7" class="grid-item"></div>
+            <div id = "f0" class="grid-item"></div>
+            <div id = "f1" class="grid-item"></div>
+            <div id = "f2" class="grid-item"></div>
+            <div id = "f3" class="grid-item"></div>
+            <div id = "f4" class="grid-item"></div>
+            <div id = "f5" class="grid-item"></div>
+            <div id = "f6" class="grid-item"></div>
+            <div id = "f7" class="grid-item"></div>
+            <div id = "e0" class="grid-item"></div>
+            <div id = "e1" class="grid-item"></div>
+            <div id = "e2" class="grid-item"></div>
+            <div id = "e3" class="grid-item"></div>
+            <div id = "e4" class="grid-item"></div>
+            <div id = "e5" class="grid-item"></div>
+            <div id = "e6" class="grid-item"></div>
+            <div id = "e7" class="grid-item"></div>
+            <div id = "d0" class="grid-item"></div>
+            <div id = "d1" class="grid-item"></div>
+            <div id = "d2" class="grid-item"></div>
+            <div id = "d3" class="grid-item"></div>
+            <div id = "d4" class="grid-item"></div>
+            <div id = "d5" class="grid-item"></div>
+            <div id = "d6" class="grid-item"></div>
+            <div id = "d7" class="grid-item"></div>
+            <div id = "c0" class="grid-item"></div>
+            <div id = "c1" class="grid-item"></div>
+            <div id = "c2" class="grid-item"></div>
+            <div id = "c3" class="grid-item"></div>
+            <div id = "c4" class="grid-item"></div>
+            <div id = "c5" class="grid-item"></div>
+            <div id = "c6" class="grid-item"></div>
+            <div id = "c7" class="grid-item"></div>
+            
+
+        </div>
+    <script>
+        var cnote = new Audio("c.wav");
+        var dnote = new Audio("d.wav");
+        var enote = new Audio("e.wav");
+        var fnote = new Audio("f.wav");
+        var gnote = new Audio("g.wav");
+        var anote = new Audio("a.wav");
+        var bnote = new Audio("b.wav");
+        let tickcount = 0;
+        var gridItems = document.querySelectorAll(".grid-item");
+        let notes = {
+            "b": "00000000",
+            "a": "00000000",
+            "g": "00000000",
+            "f": "00000000",
+            "e": "00000000",
+            "d": "00000000",
+            "c": "00000000"
+        };
+
+
+        function turnOn() {
+            this.style.backgroundColor = "rgba(83,173,203,0.3)";
+            this.removeEventListener('click', turnOn);
+            this.addEventListener("click", turnOff);
+            let num = this.id;
+            let note = num.substring(0, 1);
+            let newnote = notes[note].substring(0, parseInt(num.substring(1))) + "1" + notes[note].substring(parseInt(num.substring(1))+1);
+            notes[note] = newnote;
+
+        }
+
+        function turnOff() {
+            this.style.backgroundColor = "rgba(0,0,0,0)";
+            this.removeEventListener('click', turnOff);
+            this.addEventListener("click", turnOn);
+            let num = this.id;
+            let note = num.substring(0, 1);
+            let newnote = notes[note].substring(0, parseInt(num.substring(1))) + "0" + notes[note].substring(parseInt(num.substring(1))+1);
+            notes[note] = newnote;
+
+        }
+
+        gridItems.forEach(function(item) {
+            item.addEventListener("click", turnOn);
+        });
+        function start(){
+            tick();
+        }
+        function tick(){
+            
+            for (let note in notes) {
+                if(note == "c"){
+                    cnote.pause();
+                    cnote.currentTime=0;
+                }
+                if(note == "d"){
+                    dnote.pause();
+                    dnote.currentTime=0;
+                }
+                if(note == "e"){
+                    enote.pause();
+                    enote.currentTime=0;
+                }
+                if(note == "f"){
+                    fnote.pause();
+                    fnote.currentTime=0;
+                }
+                if(note == "g"){
+                    gnote.pause();
+                    gnote.currentTime=0;
+                }
+                if(note == "a"){
+                    anote.pause();
+                    anote.currentTime=0;
+                }
+                if(note == "b"){
+                    bnote.pause();
+                    bnote.currentTime=0;
+                }
+            }
+            tickcount++;
+            if(tickcount == 8){
+                tickcount = 0;
+            }
+            for (let note in notes) {
+                let data = notes[note];
+                if(data.charAt(tickcount) == "1"){
+                    if(note == "c"){
+                        cnote.play();
+                    }
+                    if(note == "d"){
+                        dnote.play();
+                    }
+                    if(note == "e"){
+                        enote.play();
+                    }
+                    if(note == "f"){
+                        fnote.play();
+                    }
+                    if(note == "g"){
+                        gnote.play();
+                    }
+                    if(note == "a"){
+                        anote.play();
+                    }
+                    if(note == "b"){
+                        bnote.play();
+                    }
+                }
+            }
+            
+            document.getElementById("test-line").innerHTML = String(tickcount);
+            setTimeout(tick, 500);
+        }
+        window.onload =  start;
+    </script>
+    <p id = "test-line"></p>
+    </body>
+</html>

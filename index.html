@@ -7,69 +7,143 @@
 
     </head>
     <body>
-        <div class="grid">
-            <div id = "g0" class="grid-item"></div>
-            <div id = "g1" class="grid-item"></div>
-            <div id = "g2" class="grid-item"></div>
-            <div id = "g3" class="grid-item"></div>
-            <div id = "g4" class="grid-item"></div>
-            <div id = "g5" class="grid-item"></div>
-            <div id = "g6" class="grid-item"></div>
-            <div id = "g7" class="grid-item"></div>
-            <div id = "f0" class="grid-item"></div>
-            <div id = "f1" class="grid-item"></div>
-            <div id = "f2" class="grid-item"></div>
-            <div id = "f3" class="grid-item"></div>
-            <div id = "f4" class="grid-item"></div>
-            <div id = "f5" class="grid-item"></div>
-            <div id = "f6" class="grid-item"></div>
-            <div id = "f7" class="grid-item"></div>
-            <div id = "e0" class="grid-item"></div>
-            <div id = "e1" class="grid-item"></div>
-            <div id = "e2" class="grid-item"></div>
-            <div id = "e3" class="grid-item"></div>
-            <div id = "e4" class="grid-item"></div>
-            <div id = "e5" class="grid-item"></div>
-            <div id = "e6" class="grid-item"></div>
-            <div id = "e7" class="grid-item"></div>
-            <div id = "d0" class="grid-item"></div>
-            <div id = "d1" class="grid-item"></div>
-            <div id = "d2" class="grid-item"></div>
-            <div id = "d3" class="grid-item"></div>
-            <div id = "d4" class="grid-item"></div>
-            <div id = "d5" class="grid-item"></div>
-            <div id = "d6" class="grid-item"></div>
-            <div id = "d7" class="grid-item"></div>
-            <div id = "c0" class="grid-item"></div>
-            <div id = "c1" class="grid-item"></div>
-            <div id = "c2" class="grid-item"></div>
-            <div id = "c3" class="grid-item"></div>
-            <div id = "c4" class="grid-item"></div>
-            <div id = "c5" class="grid-item"></div>
-            <div id = "c6" class="grid-item"></div>
-            <div id = "c7" class="grid-item"></div>
-            <div id = "b0" class="grid-item"></div>
-            <div id = "b1" class="grid-item"></div>
-            <div id = "b2" class="grid-item"></div>
-            <div id = "b3" class="grid-item"></div>
-            <div id = "b4" class="grid-item"></div>
-            <div id = "b5" class="grid-item"></div>
-            <div id = "b6" class="grid-item"></div>
-            <div id = "b7" class="grid-item"></div>
-            <div id = "a0" class="grid-item"></div>
-            <div id = "a1" class="grid-item"></div>
-            <div id = "a2" class="grid-item"></div>
-            <div id = "a3" class="grid-item"></div>
-            <div id = "a4" class="grid-item"></div>
-            <div id = "a5" class="grid-item"></div>
-            <div id = "a6" class="grid-item"></div>
-            <div id = "a7" class="grid-item"></div>
-
+        <div class="grid-container">
+            <div class="piano" id="piano">
+                <div class="grid">
+                    <label for="g0" class="note-label">G</label>
+                    <div id="g0" class="grid-item"></div>
+                    <div id = "g1" class="grid-item"></div>
+                    <div id = "g2" class="grid-item"></div>
+                    <div id = "g3" class="grid-item"></div>
+                    <div id = "g4" class="grid-item"></div>
+                    <div id = "g5" class="grid-item"></div>
+                    <div id = "g6" class="grid-item"></div>
+                    <div id = "g7" class="grid-item"></div>
+                    <label for="f0" class="note-label">F</label>
+                    <div id = "f0" class="grid-item"></div>
+                    <div id = "f1" class="grid-item"></div>
+                    <div id = "f2" class="grid-item"></div>
+                    <div id = "f3" class="grid-item"></div>
+                    <div id = "f4" class="grid-item"></div>
+                    <div id = "f5" class="grid-item"></div>
+                    <div id = "f6" class="grid-item"></div>
+                    <div id = "f7" class="grid-item"></div>
+                    <label for="e0" class="note-label">E</label>
+                    <div id = "e0" class="grid-item"></div>
+                    <div id = "e1" class="grid-item"></div>
+                    <div id = "e2" class="grid-item"></div>
+                    <div id = "e3" class="grid-item"></div>
+                    <div id = "e4" class="grid-item"></div>
+                    <div id = "e5" class="grid-item"></div>
+                    <div id = "e6" class="grid-item"></div>
+                    <div id = "e7" class="grid-item"></div>
+                    <label for="d0" class="note-label">D</label>
+                    <div id = "d0" class="grid-item"></div>
+                    <div id = "d1" class="grid-item"></div>
+                    <div id = "d2" class="grid-item"></div>
+                    <div id = "d3" class="grid-item"></div>
+                    <div id = "d4" class="grid-item"></div>
+                    <div id = "d5" class="grid-item"></div>
+                    <div id = "d6" class="grid-item"></div>
+                    <div id = "d7" class="grid-item"></div>
+                    <label for="c0" class="note-label">C</label>
+                    <div id = "c0" class="grid-item"></div>
+                    <div id = "c1" class="grid-item"></div>
+                    <div id = "c2" class="grid-item"></div>
+                    <div id = "c3" class="grid-item"></div>
+                    <div id = "c4" class="grid-item"></div>
+                    <div id = "c5" class="grid-item"></div>
+                    <div id = "c6" class="grid-item"></div>
+                    <div id = "c7" class="grid-item"></div>
+                    <label for="b0" class="note-label">B</label>
+                    <div id = "b0" class="grid-item"></div>
+                    <div id = "b1" class="grid-item"></div>
+                    <div id = "b2" class="grid-item"></div>
+                    <div id = "b3" class="grid-item"></div>
+                    <div id = "b4" class="grid-item"></div>
+                    <div id = "b5" class="grid-item"></div>
+                    <div id = "b6" class="grid-item"></div>
+                    <div id = "b7" class="grid-item"></div>
+                    <label for="a0" class="note-label">A</label>
+                    <div id = "a0" class="grid-item"></div>
+                    <div id = "a1" class="grid-item"></div>
+                    <div id = "a2" class="grid-item"></div>
+                    <div id = "a3" class="grid-item"></div>
+                    <div id = "a4" class="grid-item"></div>
+                    <div id = "a5" class="grid-item"></div>
+                    <div id = "a6" class="grid-item"></div>
+                    <div id = "a7" class="grid-item"></div>
+                </div>
+            </div>
+            <div class="drums" id="drums">
+                <div class="grid">
+                    <label for="00" class="note-label">Open</label>
+                    <div id = "o0" class="grid-item"></div>
+                    <div id = "o1" class="grid-item"></div>
+                    <div id = "o2" class="grid-item"></div>
+                    <div id = "o3" class="grid-item"></div>
+                    <div id = "o4" class="grid-item"></div>
+                    <div id = "o5" class="grid-item"></div>
+                    <div id = "o6" class="grid-item"></div>
+                    <div id = "o7" class="grid-item"></div>
+                    <label for="h0" class="note-label">Hi</label>
+                    <div id = "h0" class="grid-item"></div>
+                    <div id = "h1" class="grid-item"></div>
+                    <div id = "h2" class="grid-item"></div>
+                    <div id = "h3" class="grid-item"></div>
+                    <div id = "h4" class="grid-item"></div>
+                    <div id = "h5" class="grid-item"></div>
+                    <div id = "h6" class="grid-item"></div>
+                    <div id = "h7" class="grid-item"></div>
+                    <label for="t0" class="note-label">Tom</label>
+                    <div id = "t0" class="grid-item"></div>
+                    <div id = "t1" class="grid-item"></div>
+                    <div id = "t2" class="grid-item"></div>
+                    <div id = "t3" class="grid-item"></div>
+                    <div id = "t4" class="grid-item"></div>
+                    <div id = "t5" class="grid-item"></div>
+                    <div id = "t6" class="grid-item"></div>
+                    <div id = "t7" class="grid-item"></div>
+                    <label for="s0" class="note-label">Snare</label>
+                    <div id = "s0" class="grid-item"></div>
+                    <div id = "s1" class="grid-item"></div>
+                    <div id = "s2" class="grid-item"></div>
+                    <div id = "s3" class="grid-item"></div>
+                    <div id = "s4" class="grid-item"></div>
+                    <div id = "s5" class="grid-item"></div>
+                    <div id = "s6" class="grid-item"></div>
+                    <div id = "s7" class="grid-item"></div>
+                    <label for="l0" class="note-label">Clap</label>
+                    <div id = "l0" class="grid-item"></div>
+                    <div id = "l1" class="grid-item"></div>
+                    <div id = "l2" class="grid-item"></div>
+                    <div id = "l3" class="grid-item"></div>
+                    <div id = "l4" class="grid-item"></div>
+                    <div id = "l5" class="grid-item"></div>
+                    <div id = "l6" class="grid-item"></div>
+                    <div id = "l7" class="grid-item"></div>
+                    <label for="k0" class="note-label">Kick</label>
+                    <div id = "k0" class="grid-item"></div>
+                    <div id = "k1" class="grid-item"></div>
+                    <div id = "k2" class="grid-item"></div>
+                    <div id = "k3" class="grid-item"></div>
+                    <div id = "k4" class="grid-item"></div>
+                    <div id = "k5" class="grid-item"></div>
+                    <div id = "k6" class="grid-item"></div>
+                    <div id = "k7" class="grid-item"></div>
+                    
+                </div>
+            </div>
         </div>
-        <form>
+
             <label for="tempo">Tempo (bpm):</label>
-            <input type="text" id="tempo" name="tempo" value="120"">
-        </form>
+            <input type="text" id="tempo" value="120"><br>
+            <label for="piano-box">Piano:</label>
+            <input type="checkbox" id="piano-box" onchange="toggleCheckbox(this, document.getElementById('piano'))" checked>
+            <label for="drums-box">Drums:</label>
+            <input type="checkbox" id="drums-box" onchange="toggleCheckbox(this, document.getElementById('drums'))">
+
+
     <script>
         var cnote = new Audio("c.wav");
         var dnote = new Audio("d.wav");
@@ -78,6 +152,12 @@
         var gnote = new Audio("g.wav");
         var anote = new Audio("a.wav");
         var bnote = new Audio("b.wav");
+        var hinote = new Audio("hi.wav");
+        var opennote = new Audio("open.wav");
+        var tomnote = new Audio("tom.wav");
+        var snarenote = new Audio("snare.wav");
+        var kicknote = new Audio("kick.wav");
+        var clapnote = new Audio("clap.wav");
         let tickcount = 0;
         let tempo = 60;
         var gridItems = document.querySelectorAll(".grid-item");
@@ -88,12 +168,18 @@
             "f": "00000000",
             "e": "00000000",
             "d": "00000000",
-            "c": "00000000"
+            "c": "00000000",
+            "k": "00000000",
+            "l": "00000000",
+            "t": "00000000",
+            "s": "00000000",
+            "h": "00000000",
+            "o": "00000000",
         };
 
 
         function turnOn() {
-            this.style.backgroundColor = "rgba(83,173,203,0.3)";
+            this.style.backgroundColor = "white";
             this.removeEventListener('click', turnOn);
             this.addEventListener("click", turnOff);
             let num = this.id;
@@ -113,15 +199,28 @@
             notes[note] = newnote;
 
         }
-
+        function toggleCheckbox(box, instrument){
+            if(box.checked){
+                instrument.style.display = "block";
+            }
+            else{
+                instrument.style.display = "none";
+            }
+        }
         gridItems.forEach(function(item) {
             item.addEventListener("click", turnOn);
         });
         function start(){
             tick();
+            var tempoInput = document.getElementById("tempo");
+            tempoInput.addEventListener("input", function() {
+                tempo = parseInt(tempoInput.value);
+                clearTimeout(timeoutId);
+                tick();
+            });
         }
         function tick(){
-            tempo = document.getElementById("tempo").value;
+            tempo = parseInt(document.getElementById("tempo").value);
             for (let note in notes) {
                 if(note == "c"){
                     cnote.pause();
@@ -150,6 +249,30 @@
                 if(note == "b"){
                     bnote.pause();
                     bnote.currentTime=0;
+                }
+                if(note == "t"){
+                    tomnote.pause();
+                    tomnote.currentTime=0;
+                }
+                if(note == "s"){
+                    snarenote.pause();
+                    snarenote.currentTime=0;
+                }
+                if(note == "o"){
+                    opennote.pause();
+                    opennote.currentTime=0;
+                }
+                if(note == "h"){
+                    hinote.pause();
+                    hinote.currentTime=0;
+                }
+                if(note == "k"){
+                    kicknote.pause();
+                    kicknote.currentTime=0;
+                }
+                if(note == "l"){
+                    clapnote.pause();
+                    clapnote.currentTime=0;
                 }
             }
             tickcount++;
@@ -180,11 +303,29 @@
                     if(note == "b"){
                         bnote.play();
                     }
+                    if(note == "t"){
+                        tomnote.play();
+                    }
+                    if(note == "s"){
+                        snarenote.play();
+                    }
+                    if(note == "o"){
+                        opennote.play();
+                    }
+                    if(note == "h"){
+                        hinote.play();
+                    }
+                    if(note == "l"){
+                        clapnote.play();
+                    }
+                    if(note == "k"){
+                        kicknote.play();
+                    }
                 }
             }
             
             document.getElementById("test-line").innerHTML = String(tickcount);
-            setTimeout(tick, (((1/tempo)*60)*1000));
+            timeoutId = setTimeout(tick, (((1/tempo)*60)*1000));
         }
         window.onload =  start;
     </script>

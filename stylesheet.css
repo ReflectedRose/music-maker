@@ -1,9 +1,13 @@
+body{
+    background-color: black;
+    color: white;
+}
 .grid{
 
 
 
     display: grid;
-    grid-template-columns: repeat(8, 50px);
+    grid-template-columns: repeat(9, 50px);
 
     height: 500px;
     width: 500px;
@@ -13,5 +17,21 @@
     z-index: 2;
     background-color: rgba(0,0,0,0);
     padding: 20px;
-    border: 1px solid rgb(0,0,0);
+    border: 1px solid rgb(255, 255, 255);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    width: 100%; 
+}
+
+.piano, .drums {
+    width: 100%;
+}
+.piano{
+    display: block;
+}
+.drums{
+    display:none;
 }

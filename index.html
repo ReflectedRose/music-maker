@@ -66,6 +66,10 @@
             <div id = "a7" class="grid-item"></div>
 
         </div>
+        <form>
+            <label for="tempo">Tempo (bpm):</label>
+            <input type="text" id="tempo" name="tempo" value="120"">
+        </form>
     <script>
         var cnote = new Audio("c.wav");
         var dnote = new Audio("d.wav");
@@ -75,6 +79,7 @@
         var anote = new Audio("a.wav");
         var bnote = new Audio("b.wav");
         let tickcount = 0;
+        let tempo = 60;
         var gridItems = document.querySelectorAll(".grid-item");
         let notes = {
             "b": "00000000",
@@ -116,7 +121,7 @@
             tick();
         }
         function tick(){
-            
+            tempo = document.getElementById("tempo").value;
             for (let note in notes) {
                 if(note == "c"){
                     cnote.pause();
@@ -179,7 +184,7 @@
             }
             
             document.getElementById("test-line").innerHTML = String(tickcount);
-            setTimeout(tick, 500);
+            setTimeout(tick, (((1/tempo)*60)*1000));
         }
         window.onload =  start;
     </script>

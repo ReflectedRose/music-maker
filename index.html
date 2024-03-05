@@ -137,11 +137,15 @@
         </div>
 
             <label for="tempo">Tempo (bpm):</label>
-            <input type="text" id="tempo" value="120"><br>
+            <p id="tempotext">120</p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="500" value="120" class="slider" id="TempoSlider">
+              </div>
             <label for="piano-box">Piano:</label>
             <input type="checkbox" id="piano-box" onchange="toggleCheckbox(this, document.getElementById('piano'))" checked>
             <label for="drums-box">Drums:</label>
             <input type="checkbox" id="drums-box" onchange="toggleCheckbox(this, document.getElementById('drums'))" checked>
+
 
 
     <script>
@@ -178,6 +182,7 @@
         };
 
 
+
         function turnOn() {
             this.style.backgroundColor = "white";
             this.removeEventListener('click', turnOn);
@@ -212,7 +217,7 @@
         });
         function start(){
             tick();
-            var tempoInput = document.getElementById("tempo");
+            var tempoInput = document.getElementById("TempoSlider");
             tempoInput.addEventListener("input", function() {
                 tempo = parseInt(tempoInput.value);
                 clearTimeout(timeoutId);
@@ -220,7 +225,8 @@
             });
         }
         function tick(){
-            tempo = parseInt(document.getElementById("tempo").value);
+            tempo = parseInt(document.getElementById("TempoSlider").value);
+            document.getElementById('tempotext').innerHTML = tempo.toString();
             for (let note in notes) {
                 if(note == "c"){
                     cnote.pause();
